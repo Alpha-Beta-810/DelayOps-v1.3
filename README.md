@@ -12,6 +12,39 @@
 | Demo Module | ❌ Fake JS Data | ✅ Database-Driven (`sample_demo`) |
 | Layout Stability | ⚠️ Fragile | ✅ CSS-Grid protected |
 
+# ⚡ Quick Start
+
+Run the following commands in order:
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Alpha-Beta-810/DelayOps.git
+cd DelayOps
+
+# 2. Install project dependencies
+composer install
+
+# 3. Generate the application key (only if APP_KEY is not already set)
+php artisan key:generate
+
+# 4. Create/update the database schema
+php artisan migrate
+
+# 5. Clear cached configuration
+php artisan config:clear
+
+# 6. Start the Laravel development server
+php artisan serve
+```
+
+Once the server starts, open:
+
+```
+http://localhost:8000/dashboard
+```
+
+> **Note:** Ensure your `.env` file is already configured with the correct MySQL database credentials before running the migration command. This project **does not require** copying `.env.example` to `.env`, as overwriting an existing `.env` may replace a valid database configuration.
+
 # 🚀 Installation & Local Setup
 
 Follow the steps below to set up **DelayOps 1.3** on your local machine.
