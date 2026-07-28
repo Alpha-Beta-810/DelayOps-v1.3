@@ -15,8 +15,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        // Create your permanent admin account
+        User::factory()->create([
+            'name' => 'Admin',
+            'email' => 'admin@vsp.local',
+            'password' => bcrypt('password123'),
+        ]);
 
+        // Create the default test user
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
